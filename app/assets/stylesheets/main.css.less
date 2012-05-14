@@ -1,2 +1,63 @@
 @import "base.less";
 
+
+@back: #7FECFB;
+@pad: 30px;
+body {
+  font: 14px/20px "Droid Serif", serif;
+  .rad-gradient(lighten(@back, 20%), @back);
+  border: 1pt solid black;
+}
+
+.container {
+  padding: 0px @pad;
+  min-height: 100%;
+  background-color: rgba(255,255,255, 0.9);
+  .box-shadow(0px 0px 2px 1px #888);
+}
+
+#social {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#logo {
+  width: 40%;
+}
+
+
+.b {
+  //border: 1pt solid red;
+}
+
+.mid {
+  font-size: 0;
+}
+
+.left {
+  font-size: 14px;
+  display: inline-block;
+  width: 50%;
+  height: 300px;
+}
+
+.nav {
+  li {
+    padding: 20px;
+    border: 1pt solid red;
+  }
+}
+
+.right {
+  font-size: 14px;
+
+  display: inline-block;
+  
+  height: 300px;
+  width: 50%;
+}
+
+.bottom {
+  height: 200px;
+}

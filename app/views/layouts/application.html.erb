@@ -3,23 +3,26 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://opengraphprotocol.org/schema/"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://opengraphprotocol.org/schema/"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9" lang="en" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://opengraphprotocol.org/schema/"> <![endif]-->
-<!--[if gt IE 8]><!--><html lang="en" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://opengraphprotocol.org/schema/"><!--<![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://opengraphprotocol.org/schema/" itemscope itemtype="http://schema.org/Book"><!--<![endif]-->
 
 <head>
   <title>The ACT Boost</title>
-  <link href='http://fonts.googleapis.com/css?family=Mako|Lato:100,400|Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:100,400|Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
   <meta property="og:title" content="The ACT Boost" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://yaleconnect.heroku.com" />
-  <meta property="og:image" content="http://screwmeyale.com/assets/favicon.ico" />
-  <meta property="og:site_name" content="Yale connect" />
-  <meta property="og:description" content="" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://theactboost.com" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="The ACT Boost" />
+  <meta property="og:description" content="The best ACT prep book on the market -- written by a true test-taking sage." />
+
   <meta property="fb:admins" content="651881494" />
 
+  <meta itemprop="name" content="The ACT Boost">
+  <meta itemprop="description" content="The sweetest ACT prep book, the ACT Boost!">
 
   <script type="text/javascript">
     var _gaq = _gaq || [];
@@ -33,6 +36,22 @@
   </script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=390508047659869";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 <div class="container">
   <%= yield %>
 </div>
