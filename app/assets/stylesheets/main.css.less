@@ -1,25 +1,39 @@
 @import "base.less";
 
 
-@back: #7FECFB;
+@back: #030739;
 @pad: 30px;
 body {
-  font: 14px/20px "Droid Serif", serif;
+  font: 18px/22px;
+  font-family: "Droid Serif", serif;
+  font-family: "PT Sans";
   .rad-gradient(lighten(@back, 20%), @back);
-  border: 1pt solid black;
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
 }
 
 .container {
   padding: 0px @pad;
   min-height: 100%;
-  background-color: rgba(255,255,255, 0.9);
+  background-color: rgba(255,255,255,.1);
   .box-shadow(0px 0px 2px 1px #888);
 }
 
 #social {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  margin-top: 20px;
+  float:right;
+  * {
+    margin-right: -20px;
+    vertical-align: top;
+    &:last-child {
+      vertical-align: bottom;
+    }
+    &:first-child {
+      margin-right: 0px;
+    }
+  }
 }
 
 #logo {
@@ -38,7 +52,8 @@ body {
 .left {
   font-size: 14px;
   display: inline-block;
-  width: 50%;
+  width: 40%;
+  margin-right: 
   height: 300px;
 }
 
