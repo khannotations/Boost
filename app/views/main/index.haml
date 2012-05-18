@@ -1,4 +1,4 @@
-%img.logo{:src => "/assets/logo.jpg"}
+%img#logo{:src => "/assets/logo.png"}
 #social
   :plain
     <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
@@ -6,12 +6,39 @@
     <g:plusone size="medium"></g:plusone>
 
 .mid
-  .left.b
+  .left
     %ul.nav
-      %li About
-      %li Testimonials
-  .right.b
-    there
-.bottom.b
-  bottom
+      %li{:target=>"about"} About
+      %li{:target=>"testimonials"} Testimonials
+      %li{:target=>"more"} More books
+
+    #conten
+    .text{:name => "about"}
+      %h1 About
+      Some really engaging text about this book!
+    .text{:name=> "testimonials"}
+      %h1 Testimonials
+      .quote
+        "This is fantastic!"
+      .quoter
+        Rafi Khan
+
+    .text{:name => "more"}
+      %h1 Future plans
+      Jay plans to write a lot more books soon!
+    .btn.btn-big 
+      Order now!
+      .tiny (with paypal)
+
+  .right
+    %img{:src => "/assets/cover.jpg"}
+
+
+.footer
+  &copy; Jay Upadhyay 2011 |&nbsp;
+  %a{:href => "mailto:jay.jn.gor@gmail.com"} jay.jn.gor@gmail.com 
+  |&nbsp;
+  Website design by
+  %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan
+  
     
