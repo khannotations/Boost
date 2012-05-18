@@ -65,11 +65,24 @@
   -webkit-transition: @item @dur @ease @delay;
   transition: @item @dur @ease @delay;
 }
+.transitions(@item, @item2) {
+  -o-transition: @item, @item2;
+  -moz-transition: @item, @item2;
+  -webkit-transition: @item, @item2;
+  transition: @item, @item2;
+}
+
 .transition-property(@item) {
   -o-transition-property: @item;
   -moz-transition-property: @item;
   -webkit-transition-property: @item;
   transition-property: @item;
+}
+.transition-duration(@item) {
+  -o-transition-duration: @item;
+  -moz-transition-duration: @item;
+  -webkit-transition-duration: @item;
+  transition-duration: @item;
 }
 .transition-timing-function(@item) {
   -o-transition-timing-function: @item;

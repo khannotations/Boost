@@ -1,5 +1,6 @@
 $(document).ready(() ->
   
+  top = "600px"
   $(".nav li").click(() ->
     if(!$(this).hasClass("selected"))
       # Adjust selected-ness
@@ -14,7 +15,7 @@ $(document).ready(() ->
         $(".text[name='"+t+"']").fadeIn("fast")
       else
         $(".text[name='"+t+"']").slideDown(300)
-        $(".btn").animate({top:"500px"}, 300)
+        $(".btn").animate({top:top}, 300)
 
   )
 )

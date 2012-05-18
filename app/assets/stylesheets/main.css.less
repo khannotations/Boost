@@ -17,7 +17,7 @@ body {
 .container {
   padding: 0px @pad;
   min-height: 700px;
-  background-color: rgba(255,255,255,.4);
+  background-color: rgba(255,255,255,.6);
   .box-shadow(0px 0px 2px 1px #EEE);
 }
 
@@ -35,9 +35,13 @@ body {
     }
   }
 }
+@left: 45%;
+@gap: 5%;
+@right: 45%;
 
 #logo {
-  width: 45%;
+  width: @left+5;
+  margin-top: 30px;
   //border: 1pt solid grey;
 }
 
@@ -49,9 +53,7 @@ body {
   }
 }
 
-@left: 45%;
-@gap: 5%;
-@right: 45%;
+
 
 .left {
   font-size: 20px;
@@ -61,22 +63,29 @@ body {
   margin-right: @gap;
   padding-left: 20px;
 
-  //height: 300px;
 }
 
 .nav {
   margin-bottom: 30px;
   li {
     padding: 20px;
-    //padding-left: 0px;
-    //margin-left: 20px;
-    border-bottom: 1pt solid grey;
-    //border: 1pt solid red;
-    .transition(background-color, 0.2s, ease-out);
-    //.transition(color, 0.2s, ease-out);
+    border: 1pt solid transparent;
+    border-top-color: grey;
+    &:first-child{
+      border-top-color: transparent;
+    }
+    &:last-child {
+      border-bottom-color: grey;
+    }
+    .transitions(background-color 0.2s, border-color 0.2s);
+
     cursor: pointer;
     &:hover{
+      border: 1pt solid grey;
       background-color: rgba(255, 255, 255, 0.4);
+      + li {
+        border-top: 1pt solid transparent;
+      }
     } 
   }
   .selected {
@@ -89,7 +98,12 @@ body {
 
   margin-bottom: 50px;
   margin-left: 20px;
-  .transition(height, 0.5s);
+
+  ul {
+    list-style: circle;
+    padding-left: 20px;
+    font-size: 80%;
+  }
   h1 {
     text-align: center;
     font-size: 150%;
@@ -110,7 +124,7 @@ body {
 
 
 .right {
-  margin-top: -80px;
+  margin-top: -130px;
   display: inline-block;
   width: @right;
   font-size: 14px;
@@ -141,12 +155,12 @@ body {
 }
 
 .btn-big {
-  position: absolute;
+  //position: absolute;
   top: 350px;
   font-size: 30px;
   width: 150px;
   height: 80px;
-  margin: 20px auto;
+  margin: 20px auto 20px;
   padding: 34px @btn-pad 0px;
 
 }
