@@ -8,11 +8,61 @@
   #nameplate
     %img#logo{:src => "/assets/logo.png"}
     %span#name by Jay Upadhyay (let's get a better nameplate)
-  %ul
-    %li Link one
-    %li Link two
-    %li Link three
+  %ul.nav
+    %li.btn.btn-red{:target=>"about"} About
+    %li.btn.btn-yellow{:target=>"testimonials"} Testimonials
+    %li.btn.btn-blue{:target=>"tutoring"} Tutoring
+    %li.btn{:target=>"order"} Order Now!
 
+#middle
+  .left
+    .text
+      %h6
+        Get ready for the easiest road to the elusive 36!
+      %p
+    .text{:name => "about"}
+      %h1 About
+      Some really engaging text about this book!
+      %ul
+        %li A list
+        %li of contents
+        %li perhaps?
+      .quote Why it's better than everything else!
+      .dr Colors, maybe?
+      %span{:style => "color: green"} more!
+    .text{:name=> "testimonials"}
+      %h1 Testimonials
+      .quote
+        "This is fantastic!"
+      .quoter
+        Rafi Khan
+
+    .text{:name => "tutoring"}
+      %h1 Tutoring
+    .text{:name => "order"}
+      %h1 Content for ordering
+  .right
+    -#
+      .btn.btn-big 
+      Order now!
+      .tiny (with paypal)
+    #nivo.theme-default
+      #slider.nivoSlider{:style => "margin-bottom: 0px;"}
+        %img{:src => "/assets/cover.jpg", :title => "We can add captions, too!"}
+        %img{:src => "/assets/1.png", :title => "Fancy ones"}
+        %img{:src => "/assets/2.png", :title => "#caption"}
+        %img{:src => "/assets/3.png", :title => "hehehe"}
+    #caption.hide
+      %strong With
+      %a{:href => "//google.com"} links
+      %emph even :)
+
+#footer
+  &copy; Jay Upadhyay 2012 |&nbsp;
+  %a{:href => "mailto:jay.jn.gor@gmail.com"} jay.jn.gor@gmail.com 
+  |&nbsp;
+  Website design by
+  %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan
 -# 
   %img#logo{:src => "/assets/logo.png"}
   #social

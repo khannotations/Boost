@@ -11,11 +11,23 @@ $(document).ready(() ->
       t = $(this).attr("target")
 
       # If first time clicking, slideDown, else fadeIn
-      if($(".text:visible").hide().length)
-        $(".text[name='"+t+"']").fadeIn("fast")
-      else
-        $(".text[name='"+t+"']").slideDown(300)
-        $(".btn").animate({top:top}, 300)
+      $(".text:visible").hide();
+      $(".text[name='"+t+"']").fadeIn("fast");
+
+      
+
+      # if($(".text:visible").hide().length)
+      #   $(".text[name='"+t+"']").fadeIn("fast")
+      # else
+      #   $(".text[name='"+t+"']").slideDown(300)
+      #   $(".btn").animate({top:top}, 300)
 
   )
+)
+#'fade,fold,sliceDown,sliceUp'
+$(window).load(() ->
+  $("#slider").nivoSlider({
+    effect: 'fade,fold,sliceDown,sliceUp',
+    pauseTime: 10000
+  })
 )

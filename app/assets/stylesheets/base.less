@@ -119,3 +119,13 @@
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
 }
+
+.3d(@color: #FFF) {
+  .gradient(@color, darken(@color, 15%));
+  &:hover {
+    .gradient(lighten(@color, 5%), darken(@color, 10%));
+  }
+  &:active {
+    .gradient(darken(@color, 10%), lighten(@color, 5%));
+  }
+}
