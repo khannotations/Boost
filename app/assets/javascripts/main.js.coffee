@@ -5,7 +5,7 @@ $(document).ready(() ->
     if(!$(this).hasClass("selected"))
       # Adjust selected-ness
       $(".nav .selected").removeClass("selected")
-      $($(this).addClass("selected"))
+      $(this).addClass("selected")
 
       # Get target div
       t = $(this).attr("target")

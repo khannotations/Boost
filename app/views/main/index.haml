@@ -1,50 +1,66 @@
-%img#logo{:src => "/assets/logo.png"}
 #social
   :plain
     <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theactboost.com" data-text="The sweetest ACT prep book, the ACT Boost!" data-count="horizontal">Tweet</a>
     <g:plusone size="medium"></g:plusone>
 
-.mid
-  .left
-    %ul.nav
-      %li{:target=>"about"} About
-      %li{:target=>"testimonials"} Testimonials
-      %li{:target=>"more"} More books
+#top
+  #nameplate
+    %img#logo{:src => "/assets/logo.png"}
+    %span#name by Jay Upadhyay (let's get a better nameplate)
+  %ul
+    %li Link one
+    %li Link two
+    %li Link three
 
-    .text{:name => "about"}
-      %h1 About
-      Some really engaging text about this book!
-      %ul
-        %li A list
-        %li of contents
-        %li perhaps?
-      .quote Why it's better than everything else!
-      .dr Colors, maybe?
-      %span{:style => "color: green"} more!
-    .text{:name=> "testimonials"}
-      %h1 Testimonials
-      .quote
-        "This is fantastic!"
-      .quoter
-        Rafi Khan
+-# 
+  %img#logo{:src => "/assets/logo.png"}
+  #social
+    :plain
+      <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theactboost.com" data-text="The sweetest ACT prep book, the ACT Boost!" data-count="horizontal">Tweet</a>
+      <g:plusone size="medium"></g:plusone>
 
-    .text{:name => "more"}
-      %h1 Future plans
-      Jay plans to write a lot more books soon!
+  .mid
+    .left
+      %ul.nav
+        %li{:target=>"about"} About
+        %li{:target=>"testimonials"} Testimonials
+        %li{:target=>"more"} More books
 
-  .right
-    .btn.btn-big 
-      Order now!
-      .tiny (with paypal)
-    %img{:src => "/assets/cover.jpg"}
+      .text{:name => "about"}
+        %h1 About
+        Some really engaging text about this book!
+        %ul
+          %li A list
+          %li of contents
+          %li perhaps?
+        .quote Why it's better than everything else!
+        .dr Colors, maybe?
+        %span{:style => "color: green"} more!
+      .text{:name=> "testimonials"}
+        %h1 Testimonials
+        .quote
+          "This is fantastic!"
+        .quoter
+          Rafi Khan
+
+      .text{:name => "more"}
+        %h1 Future plans
+        Jay plans to write a lot more books soon!
+
+    .right
+      .btn.btn-big 
+        Order now!
+        .tiny (with paypal)
+      %img{:src => "/assets/cover.jpg"}
 
 
-.footer
-  &copy; Jay Upadhyay 2012 |&nbsp;
-  %a{:href => "mailto:jay.jn.gor@gmail.com"} jay.jn.gor@gmail.com 
-  |&nbsp;
-  Website design by
-  %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan
-  
+  .footer
+    &copy; Jay Upadhyay 2012 |&nbsp;
+    %a{:href => "mailto:jay.jn.gor@gmail.com"} jay.jn.gor@gmail.com 
+    |&nbsp;
+    Website design by
+    %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan
     
+      

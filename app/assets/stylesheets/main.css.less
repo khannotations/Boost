@@ -1,6 +1,5 @@
 @import "base.less";
 
-
 @back: #030739;
 @pad: 30px;
 body {
@@ -8,18 +7,96 @@ body {
   font-family: "Droid Serif", serif;
   font-family: "PT Sans";
   //.rad-gradient(lighten(@back, 20%), @back);
-  background-image: url("/assets/background.jpg");
-  background-size: cover;
+  //background-image: url("/assets/background.jpg");
+  //background-size: cover;
   background-repeat: no-repeat;
   background-color: #DDD;
 }
 
 .container {
-  padding: 0px @pad;
+  //padding: 0px @pad;
   min-height: 700px;
-  background-color: rgba(255,255,255,.6);
+  //background-color: rgba(255,255,255,.6);
   .box-shadow(0px 0px 2px 1px #EEE);
 }
+
+@top-height: 200px;
+#top {
+  //border: 1pt solid red;
+  height: @top-height;
+  background-repeat: no-repeat;
+  background-color: #FFF;
+
+  ul {
+    margin-top: -10px;
+    z-index: 10;
+  }
+
+  @first: lighten(blue, 10%);
+  @two: yellow;
+  @last: red;
+
+  li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 10%;
+    padding: 10px 20px ;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+
+    }
+    &:first-child {
+      background-color: @first;
+      &:hover {
+        background-color: lighten(@first, 10%);
+      }
+    }
+    &:nth-child(2) {
+      background-color: @two;
+      &:hover {
+        background-color: darken(@two, 10%);
+      }
+    }
+    &:last-child {
+      background-color: @last;
+      &:hover {
+        background-color: darken(@last, 10%);
+      }
+    }
+  }
+}
+
+#logo {
+  //float: left;
+  margin-top: -20px;
+  height: 100%;
+  z-index: -10;
+}
+#name {
+  color: #333;
+  position: absolute;
+  top: 120px;
+}
+
+#social {
+  margin-top: 20px;
+  float:right;
+  * {
+    margin-right: -20px;
+    vertical-align: top;
+    &:last-child {
+      vertical-align: bottom;
+    }
+    &:first-child {
+      margin-right: 0px;
+    }
+  }
+}
+/*
 
 #social {
   margin-top: 20px;
@@ -175,4 +252,4 @@ body {
   }
 }
 
-
+*/
