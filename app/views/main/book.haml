@@ -1,0 +1,52 @@
+#top
+  %a{:href => "/"}
+    %img#logo{:src => "/assets/logo.png"}
+  .pull-right
+    #social
+      :plain
+        <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theactboost.com" data-text="The sweetest ACT prep book, the ACT Boost!" data-count="horizontal">Tweet</a>
+        <g:plusone size="medium"></g:plusone>
+    .nav.small-nav
+      %ul
+        %li{:target=>"about"} 
+          %a{:href => "#"} The book
+        %li{:target=>"about"} 
+          %a{:href => "/author"} The author
+        %li{:target=>"more"} 
+          %a{:href => "/more"} More!
+
+      -#%li.btn{:target=>"order"} Order Now!
+  
+
+#content
+  .box
+    .small
+      %h1 The caption for
+      %p this pitcha
+    .fill
+
+    .big
+      %img{:src => "/assets/1.png"}
+  .box
+    .big
+      %img{:src => "/assets/2.png"}
+    .fill
+    .small
+      %h1 The caption for
+      %p this pitcha
+  .box
+    .small
+      %h1 The caption for
+      %p this pitcha
+    .fill
+    .big
+      %img{:src => "/assets/3.png"}
+
+.footer
+  &copy; Jay Upadhyay 2012 |&nbsp;
+  %a{:href => "mailto:jay.jn.gor@gmail.com"} jay.jn.gor@gmail.com 
+  |&nbsp;
+  Website design by
+  %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan
+-#

@@ -1,49 +1,178 @@
 @import "base.less";
 
+@width: 980px;
 @back: #030739;
 @pad: 30px;
+@background: #FDFDFD;
 body {
   font: 18px/22px;
   font-family: "Droid Serif", serif;
   font-family: "PT Sans";
-  //.rad-gradient(lighten(@back, 20%), @back);
+  .rad-gradient(white, @background);
   //background-image: url("/assets/background.jpg");
   //background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/assets/back.jpg");
-  background-size: cover;
 }
 
 .container {
   min-height: 700px;
 }
 
-@top-height: 150px;
-#top {
-  //border: 1pt solid red;
-  height: @top-height;
-  background-repeat: no-repeat;
-  background-color: #FFF;
-  margin-top: 20px;
-  ul {
-    margin-top: -10px;
-    z-index: 10;
+#social {
+  //margin-top: 20px;
+  float:right;
+  * {
+    margin-right: -20px;
+    vertical-align: top;
+    &:last-child {
+      vertical-align: bottom;
+    }
+    &:first-child {
+      margin-right: 0px;
+    }
   }
+}
 
-  @first: lighten(blue, 10%);
-  @two: yellow;
-  @last: red;
+@top-height: 80px;
+#top {
+  height: @top-height;
+  background-color: @background;
+  margin-top: 20px;
+  img {
+    max-width: 60%;
+  }
+}
 
+/* Tab colors */
+@first: #00B9E4;
+@two: #EC008C;
+@last: #92D400;
+
+.nav {
+  font-size: 0px;
   li {
     display: inline-block;
-    margin-left: 20px;
-    width: 10%;
-    padding: 10px 20px ;
+    width: 33.25%;
+    text-align: center;
+    cursor:pointer;
+    border: 1pt solid #DDD;
+    border-right: none;
+    &:last-child {
+      background-color: @last;
+      .3d(@last);
+      .border-radius(5px, 5px, 0px, 0px);
+      border-right: 1pt solid #DDD;
+    }
+    &:first-child {
+      background-color: @first;
+      .3d(@first);
+
+      .border-radius(0px, 0px, 5px, 5px);
+    }
+    &:nth-child(2) {
+      background-color: @two;
+      .3d(@two);
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+.big-nav {
+  li {
     font-size: 15px;
     line-height: 30px;
   }
-  .box-shadow(0px 0px 1px 1px #888);
+  a {
+    padding: 10px 0px;
+  }
+}
+.small-nav {
+  width: 300px;
+  margin-top: 50px;
+  //float: right;
 
+  li {
+    width: 32.9%;
+    font-size: 8px;
+    line-height: 10px;
+  }
+  a {
+    padding: 5px 0px;
+      
+  }
+
+}
+@left: 45%;
+@gap: 5%;
+@right: 47%;
+
+#content {
+  min-height: 400px;
+  border: 1pt solid #DDD;
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+
+  .img {
+    border: 1pt solid #DDD;
+    width: 100%;
+  }
+}
+
+.box {
+  padding: 20px 0px;
+  border-bottom: 4pt double #DDD;
+  margin: 20px 0px;
+  &:first-child {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  &:last-child {
+    border-bottom: none;
+
+  }
+  font-size: 0px;
+  > div {
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+@small: 35%;
+@big: 60%;
+
+.small {
+  font-size: 20px;
+  width: @small;
+}
+.fill {
+  width: 100 - @small - @big;
+}
+.big {
+  font-size: 20px;
+
+  width: @big;
+  img {
+    width: 100%;
+  }
+}
+
+.left {
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  width: @left;
+  margin-right: @gap;
+  padding-left: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  min-height: 500px;
+}
+.right {
+  display: inline-block;
+  width: @right;
+  font-size: 14px;
 }
 
 #logo {
@@ -58,39 +187,12 @@ body {
   top: 120px;
 }
 
-#social {
-  margin-top: 20px;
-  float:right;
-  * {
-    margin-right: -20px;
-    vertical-align: top;
-    &:last-child {
-      vertical-align: bottom;
-    }
-    &:first-child {
-      margin-right: 0px;
-    }
-  }
-}
+
 
 #middle {
   margin-top: 40px;
 }
-@left: 45%;
-@gap: 5%;
-@right: 47%;
 
-.left {
-  vertical-align: top;
-  font-size: 20px;
-  line-height: 24px;
-  display: inline-block;
-  width: @left;
-  margin-right: @gap;
-  padding-left: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  min-height: 500px;
-}
 .text {
   display: none;
   &:first-child {
@@ -123,12 +225,7 @@ body {
 }
 
 
-.right {
-  display: inline-block;
-  width: @right;
-  font-size: 14px;
-  
-}
+
 #nivo {
   width: 100%;
   .box-shadow(0px 0px 2px 1px #888);
@@ -142,17 +239,22 @@ body {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   display: block;
   vertical-align: top;
-  .3d();
+  //.3d();
 }
 
 .btn-red {
-  .3d(red);
+  background-color: @first;
+  //.3d(@first);
 }
 .btn-yellow {
-  .3d(yellow);
+  background-color: @two;
+
+  //.3d(@two);
 }
 .btn-blue {
-  .3d(lighten(#3366FF, 10%));
+  background-color: @last;
+
+  //.3d(@last);
 }
 
 .btn-big {
@@ -161,7 +263,7 @@ body {
   padding: 34px @btn-pad 0px;
 }
 
-#footer {
+.footer {
   font-size: 80%;
   text-align: center;
   padding: 20px 00px;

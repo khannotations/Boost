@@ -120,12 +120,12 @@
   transform: translate(@x, @y);
 }
 
-.3d(@color: #FFF) {
-  .gradient(@color, darken(@color, 15%));
+.3d(@color: #FAFAFA) {
+  .gradient(lighten(@color, 5%), darken(@color, 10%));
   &:hover {
-    .gradient(lighten(@color, 5%), darken(@color, 10%));
+    .gradient(lighten(@color, 15%), darken(@color, 5%));
   }
   &:active {
-    .gradient(darken(@color, 10%), lighten(@color, 5%));
+    .gradient(@color, lighten(@color, 10%));
   }
 }
