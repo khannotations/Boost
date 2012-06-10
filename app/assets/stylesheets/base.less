@@ -119,8 +119,7 @@
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
 }
-
-.3d(@color: #FAFAFA) {
+.btn(@color: #FAFAFA) {
   .gradient(lighten(@color, 5%), darken(@color, 10%));
   &:hover {
     .gradient(lighten(@color, 15%), darken(@color, 5%));
@@ -128,4 +127,8 @@
   &:active {
     .gradient(@color, lighten(@color, 10%));
   }
+}
+
+.3d(@color: #FAFAFA) {
+  .gradient(lighten(@color, 5%), darken(@color, 10%));
 }

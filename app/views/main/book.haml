@@ -2,11 +2,8 @@
   %a{:href => "/"}
     %img#logo{:src => "/assets/logo.png"}
   .pull-right
-    #social
-      :plain
-        <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theactboost.com" data-text="The sweetest ACT prep book, the ACT Boost!" data-count="horizontal">Tweet</a>
-        <g:plusone size="medium"></g:plusone>
+    = render :partial => "social"
+
     .nav.small-nav
       %ul
         %li{:target=>"about"} 
@@ -21,25 +18,32 @@
 
 #content
   .box
-    .small
-      %h1 The caption for
-      %p this pitcha
-    .fill
+    .small.left.one
+      %h1 Overview
+      .content
+        %p 
+          I wrote this book after years of experience, training and all that good stuff about why everyone should buy this book. Maybe discuss philosophy/overview here, too?
+          %ul
+            %li Add a list
+            %li if you want
 
+    / The fill makes the space between divs since .small may come before or after the .big (so margins don't work)
     .big
       %img{:src => "/assets/1.png"}
   .box
     .big
       %img{:src => "/assets/2.png"}
-    .fill
-    .small
-      %h1 The caption for
-      %p this pitcha
+    .small.right.two
+      %h1 Reading
+      .content
+        %p 
+          An explanation of your idea behind the reading section, and why it's awesome. the image should correspond.
   .box
-    .small
-      %h1 The caption for
-      %p this pitcha
-    .fill
+    .small.left.three
+      %h1 Mathematics
+      .content
+        %p 
+          I'm tryign to think of ways to spicen this up with color...ideas?
     .big
       %img{:src => "/assets/3.png"}
 
