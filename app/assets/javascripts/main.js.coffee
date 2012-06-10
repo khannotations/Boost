@@ -1,6 +1,8 @@
 $(document).ready(() ->
   
   top = "600px"
+  gplus()
+  
   $(".nav li").click(() ->
     if(!$(this).hasClass("selected"))
       # Adjust selected-ness
@@ -24,6 +26,17 @@ $(document).ready(() ->
 
   )
 )
+
+# Check every second for the google+ to load, and change its vertical align
+gplus = () ->
+  setTimeout(() ->
+    if($("#___plusone_0").length)
+      $("#___plusone_0").css({"verticalAlign" : "top"})
+    else
+      gplus()
+  , 1000)
+  
+
 #'fade,fold,sliceDown,sliceUp'
 $(window).load(() ->
   $("#slider").nivoSlider({

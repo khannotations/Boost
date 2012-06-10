@@ -23,14 +23,11 @@ body {
 }
 
 #social {
-  //margin-top: 20px;
   float: right;
   * {
+      vertical-align: top;
+    
     margin-right: -30px;
-    vertical-align: top;
-    &:last-child {
-      vertical-align: bottom;
-    }
     &:first-child {
       margin-right: 0px;
     }
@@ -55,6 +52,7 @@ body {
 .nav {
   font-size: 0px;
   li {
+    color: white;
     display: inline-block;
     width: 33.25%;
     text-align: center;
@@ -85,11 +83,9 @@ body {
 }
 .big-nav {
   li {
-    color: white;
     font-weight: bold;
     font-size: 25px;
     line-height: 34px;
-
   }
   a {
     padding: 10px 0px;
@@ -98,7 +94,6 @@ body {
 .small-nav {
   width: 300px;
   margin-top: 40px;
-  //float: right;
 
   li {
     width: 32.9%;
@@ -107,22 +102,22 @@ body {
   }
   a {
     padding: 5px 0px;
-      
   }
-
 }
+
+
 @left: 45%;
 @gap: 100 - @left - @right;
 @right: 47%;
 @small-pad: 20px;
 
 #content {
-  //min-height: 400px;
   border: 1pt solid #DDD;
   background-color: white;
   margin-top: 20px;
   padding: 0 @pad;
-  .block-fix(@font-size);
+  font-size: 0;
+  //.block-fix(@font-size);
 
   .img {
     border: 1pt solid #DDD;
@@ -140,7 +135,7 @@ body {
     font-size: 32px;
     margin-top: 50px;
     font-weight: bold;
-    // /text-align: center;
+    // text-align: center;
     //.rounded(5px);
     padding: 20px;
     padding-left: 19+@pad;
@@ -150,7 +145,6 @@ body {
 }
 .main-left {
   margin-top: @small-pad;
-
   vertical-align: top;
   font-size: 20px;
   line-height: 24px;
@@ -158,9 +152,9 @@ body {
   width: @left;
   margin-right: @gap;
   background-color: rgba(255, 255, 255, 0.7);
+
 }
 .main-right {
-
   display: inline-block;
   width: @right;
   font-size: 14px;
@@ -175,7 +169,6 @@ body {
   &:last-child {
     border-bottom: none;
     margin-bottom: 0;
-
   }
   font-size: 0px;
   > div {
@@ -189,7 +182,7 @@ body {
 @margin: 100 - @small - @big;
 
 .small {
-  font-size: 18px;
+  font-size: @font-size;
   text-align: justify;
   width: @small;
 
@@ -209,9 +202,9 @@ body {
     }
   }
 
-  .content {
+  .text {
     margin-left: 30px;
-    font-size: 18px;
+    font-size: @font-size;
     line-height: 26px;
   }
 

@@ -6,11 +6,11 @@
 
     .nav.small-nav
       %ul
-        %li{:target=>"about"} 
+        %li{:target=>""} 
           %a{:href => "#"} The book
-        %li{:target=>"about"} 
+        %li{:target=>"The author"} 
           %a{:href => "/author"} The author
-        %li{:target=>"more"} 
+        %li{:target=>"More!"} 
           %a{:href => "/more"} More!
 
       -#%li.btn{:target=>"order"} Order Now!
@@ -20,7 +20,7 @@
   .box
     .small.left.one
       %h1 Overview
-      .content
+      .text
         %p 
           I wrote this book after years of experience, training and all that good stuff about why everyone should buy this book. Maybe discuss philosophy/overview here, too?
           %ul
@@ -35,13 +35,13 @@
       %img{:src => "/assets/2.png"}
     .small.right.two
       %h1 Reading
-      .content
+      .text
         %p 
           An explanation of your idea behind the reading section, and why it's awesome. the image should correspond.
   .box
     .small.left.three
       %h1 Mathematics
-      .content
+      .text
         %p 
           I'm tryign to think of ways to spicen this up with color...ideas?
     .big
