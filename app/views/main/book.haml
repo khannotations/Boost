@@ -10,6 +10,8 @@
           %a{:href => "#"} The book
         %li{:target=>"The author"} 
           %a{:href => "/author"} The author
+        %li{:target=>"Acclaim"} 
+          %a{:href => "/acclaim"} Acclaim
         %li{:target=>"More!"} 
           %a{:href => "/more"} More!
 
@@ -26,8 +28,6 @@
           %ul
             %li Add a list
             %li if you want
-
-    / The fill makes the space between divs since .small may come before or after the .big (so margins don't work)
     .big
       %img{:src => "/assets/1.png"}
   .box
@@ -46,6 +46,16 @@
           I'm tryign to think of ways to spicen this up with color...ideas?
     .big
       %img{:src => "/assets/3.png"}
+  .box
+    .big
+      %img{:src => "/assets/2.png"}
+    .small.right.four
+      %h1 Science
+      .text
+        %p 
+          E = MC
+          %sup 2
+          , yo
 
 .footer
   &copy; Jay Upadhyay 2012 |&nbsp;

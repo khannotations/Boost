@@ -8,4 +8,8 @@ class MainController < ApplicationController
 
   def author
   end
+
+  def acclaim
+  end
+  
 end

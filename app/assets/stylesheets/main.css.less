@@ -48,13 +48,14 @@ body {
 @one: #00B9E4;
 @two: #EC008C;
 @three: #92D400;
+@four: #FF6E00;
 
 .nav {
   font-size: 0px;
   li {
     color: white;
     display: inline-block;
-    width: 33.25%;
+    width: 24.8%;
     text-align: center;
     cursor:pointer;
     border: 1pt solid #DDD;
@@ -69,9 +70,13 @@ body {
       background-color: @two;
       .btn(@two);
     }
-    &:last-child {
+    &:nth-child(3) {
       background-color: @three;
       .btn(@three);
+    }
+    &:last-child {
+      background-color: @four;
+      .btn(@four);
       //.border-radius(5px, 5px, 0px, 0px);
       border-right: 1pt solid #DDD;
     }
@@ -96,7 +101,7 @@ body {
   margin-top: 40px;
 
   li {
-    width: 32.9%;
+    width: 295/4px;
     font-size: 8px;
     line-height: 10px;
   }
@@ -158,6 +163,9 @@ body {
   display: inline-block;
   width: @right;
   font-size: 14px;
+  img {
+    width: 100%;
+  }
 }
 
 .box {
@@ -197,7 +205,7 @@ body {
   &.right {
     margin-left: @margin;
     h1 {
-      margin-right: -1-@pad;
+      margin-right: -2-@pad;
       padding-left: 10px;
     }
   }
@@ -225,6 +233,9 @@ body {
   &.three h1 {
     .3d(lighten(@three, 10%));
   }
+  &.four h1 {
+    .3d(lighten(@four, 10%));
+  }
 }
 .big {
   font-size: 20px;
@@ -236,7 +247,7 @@ body {
 .testimonials {
   padding: 10px;
   margin-top: 30px;
-  border-top: 3pt double #ddd;
+  //border-top: 3pt double #ddd;
   .block-fix(@font-size);
 }
 .test {
@@ -273,12 +284,10 @@ body {
   top: 120px;
 }
 
-
-
 #middle {
   margin-top: 40px;
 }
-
+/*
 .text {
   display: none;
   &:first-child {
@@ -300,7 +309,6 @@ body {
 }
 
 
-/*
 #nivo {
   width: 100%;
   .box-shadow(0px 0px 2px 1px #888);
