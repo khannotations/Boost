@@ -106,34 +106,60 @@ body {
 
 }
 @left: 45%;
-@gap: 5%;
+@gap: 100 - @left - @right;
 @right: 47%;
-
 @small-pad: 20px;
+
 #content {
-  min-height: 400px;
+  min-height: 500px;
   border: 1pt solid #DDD;
   background-color: white;
   margin-top: 20px;
   padding: @small-pad @pad;
+  font-size: 0px;
 
   .img {
     border: 1pt solid #DDD;
     width: 100%;
   }
+
+  .content-left {
+    vertical-align: top;
+    font-size: 20px;
+    line-height: 24px;
+    display: inline-block;
+    width: @left;
+    margin-right: @gap;
+    //padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    //min-height: 500px;
+  }
+  .content-right {
+    display: inline-block;
+    width: @right;
+    font-size: 14px;
+  }
+  a.btn {
+    display: block;
+    width: 50%;
+    margin: auto;
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+    //.rounded(5px);
+    padding: 20px;
+    .btn();
+    text-decoration: none;
+  }
 }
 
 .box {
-  padding: 20px 0px;
-  border-bottom: 4pt double #DDD;
-  margin: 20px 0px;
+  //border-bottom: 4pt double #DDD; 
   &:first-child {
-    margin-top: 0px;
     padding-top: 0px;
   }
   &:last-child {
     border-bottom: none;
-
   }
   font-size: 0px;
   > div {
@@ -141,6 +167,7 @@ body {
     display: inline-block;
   }
 }
+
 @small: 45%;
 @big: 50%;
 @margin: 100 - @small - @big;
@@ -148,33 +175,34 @@ body {
 .small {
   font-size: 20px;
   text-align: justify;
+  width: @left;
 
-  width: @small;
   &.left {
-    margin-right: @margin;
+    margin-right: @gap;
     h1 { 
       padding-left: @pad;
       margin-left: -@pad;
     }
   }
+
   &.right {
-    margin-left: @margin;
+    margin-left: @gap;
     h1 {
       margin-right: -1-@pad;
       padding-left: 10px;
     }
   }
+
   .content {
     margin-left: 30px;
     line-height: 28px;
-
   }
+
   li:before {
     content: "- ";
     font-weight: bold;
   }
   h1 {
-    border-bottom: 3pt double #ddd;
     line-height: 160%;
     margin-bottom: 20px;
   }
@@ -188,34 +216,15 @@ body {
     .3d(lighten(@three, 10%));
   }
 }
-.fill {
-  width: 100 - @small - @big;
-}
 .big {
   font-size: 20px;
-
-  width: @big;
+  width: @right;
   img {
     width: 100%;
   }
 }
 
-.content-left {
-  vertical-align: top;
-  font-size: 20px;
-  line-height: 24px;
-  display: inline-block;
-  width: @left;
-  margin-right: @gap;
-  //padding-left: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  min-height: 500px;
-}
-.content-right {
-  display: inline-block;
-  width: @right;
-  font-size: 14px;
-}
+
 
 #logo {
   //float: left;
