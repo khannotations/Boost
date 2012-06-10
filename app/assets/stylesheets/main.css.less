@@ -4,8 +4,11 @@
 @back: #030739;
 @pad: 30px;
 @background: #FDFDFD;
+@font-size: 18px;
+@line-height: 24px;
 body {
-  font: 18px/22px;
+  font: @font-size;
+  line-height: @line-height;
   font-family: "Droid Serif", serif;
   font-family: "PT Sans";
   //font-family: "Mako";
@@ -116,7 +119,7 @@ body {
   background-color: white;
   margin-top: 20px;
   padding: 0 @pad;
-  font-size: 0px;
+  .block-fix(@font-size);
 
   .img {
     border: 1pt solid #DDD;
@@ -124,14 +127,13 @@ body {
   }
   &.main > div {
     margin-top: @small-pad;
-
   }
 
   a.btn {
     display: block;
-    width: @width - 40; // Two for borders
-    margin-left: -1-@pad;
-    //margin: auto;
+    width: 100%; // Two for borders
+    //margin-left: -1-@pad;
+    margin: auto;
     font-size: 40px;
     margin-top: 50px;
     text-align: center;
@@ -233,6 +235,31 @@ body {
     width: 100%;
   }
 }
+.testimonials {
+  padding: 10px;
+  margin-top: 30px;
+  border-top: 3pt double #ddd;
+  .block-fix(@font-size);
+}
+.test {
+  display: inline-block;
+  width: 29%;
+  margin-right: 5%;
+  &:last-child {
+    margin: 0;
+  }
+}
+.quote {
+  font-style: italic;
+  margin-bottom: 5px;
+}
+.quoter {
+  text-align: right;
+  font-size: 80%;
+  &:before{
+    content: " - ";
+  }
+}
 
 
 
@@ -272,17 +299,6 @@ body {
     font-size: 150%;
   }
 
-  .quote {
-    font-style: italic;
-    margin-bottom: 5px;
-  }
-  .quoter {
-    text-align: right;
-    font-size: 80%;
-    &:before{
-      content: " - ";
-    }
-  }
 }
 
 

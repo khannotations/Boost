@@ -134,3 +134,10 @@
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   .gradient(lighten(@color, 5%), darken(@color, 10%));
 }
+
+.block-fix(@size: 16px) {
+  font-size: 0;
+  > div {
+    font-size: @size;
+  }
+}
