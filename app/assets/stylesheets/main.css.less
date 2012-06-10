@@ -65,7 +65,7 @@ body {
     &:first-child {
       background-color: @one;
       .btn(@one);
-      .border-radius(0px, 0px, 5px, 5px);
+      //.border-radius(0px, 0px, 5px, 5px);
     }
     &:nth-child(2) {
       background-color: @two;
@@ -74,7 +74,7 @@ body {
     &:last-child {
       background-color: @three;
       .btn(@three);
-      .border-radius(5px, 5px, 0px, 0px);
+      //.border-radius(5px, 5px, 0px, 0px);
       border-right: 1pt solid #DDD;
     }
   }
@@ -85,8 +85,11 @@ body {
 }
 .big-nav {
   li {
-    font-size: 15px;
-    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+
   }
   a {
     padding: 10px 0px;
@@ -131,14 +134,16 @@ body {
 
   a.btn {
     display: block;
-    width: 100%; // Two for borders
-    //margin-left: -1-@pad;
-    margin: auto;
-    font-size: 40px;
+    color: red;
+    margin-left: -1-@pad;
+    //margin: auto;
+    font-size: 32px;
     margin-top: 50px;
-    text-align: center;
+    font-weight: bold;
+    // /text-align: center;
     //.rounded(5px);
     padding: 20px;
+    padding-left: 19+@pad;
     .btn(#fff300);
     text-decoration: none;
   }
