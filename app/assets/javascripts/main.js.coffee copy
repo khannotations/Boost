@@ -1,17 +1,22 @@
 $(document).ready(() ->
   
+  top = "600px"
   gplus()
-  topHeight = 140
-
-  $(".nav td").click(() ->
-    tar = $(this).attr("target")
-    div = $(".divider[name='"+tar+"']")
-    $("body,html,document").animate({
-      scrollTop: $(div).offset().top - topHeight
-    }, 500);
-    console.log $(div).offset().top
-  )
   
+  $(".nav li").click(() ->
+    if(!$(this).hasClass("selected"))
+      # Adjust selected-ness
+      $(".nav .selected").removeClass("selected")
+      $(this).addClass("selected")
+
+      # Get target div
+      t = $(this).attr("target")
+
+      # If first time clicking, slideDown, else fadeIn
+      $(".text:visible").hide();
+      $(".text[name='"+t+"']").fadeIn("fast");
+
+  )
 )
 
 # Check every second for the google+ to load, and change its vertical align

@@ -19,10 +19,6 @@ body {
   //background-repeat: no-repeat;
 }
 
-h1 {
-  font-size: 36px;
-  line-height: 50px;
-}
 
 #social {
   float: right;
@@ -35,21 +31,22 @@ h1 {
     }
   }
 }
-@top-height: 150px;
 .top-container {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
-  height: @top-height;
   background-image: url("/assets/back-diag.jpg");
 }
-
+@top-height: 80px;
 #top {
+  height: @top-height;
   background-color: transparent;
-  img {
-    height: 70px;
-  }
+
+  //background-color: @background;
   margin-top: 20px;
+  img {
+    max-width: 60%;
+  }
 }
 
 /* Tab colors */
@@ -94,6 +91,30 @@ h1 {
     width: 243px;
   }
 }
+.big-nav {
+  li {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+  }
+  a {
+    padding: 10px 0px;
+  }
+}
+.small-nav {
+  width: 300px;
+  margin-top: 40px;
+
+  li {
+    width: 295/4px;
+    font-size: 8px;
+    line-height: 10px;
+  }
+  a {
+    padding: 5px 0px;
+  }
+}
+
 
 @left: 45%;
 @gap: 100 - @left - @right;
@@ -103,22 +124,29 @@ h1 {
 #content {
   border: 1pt solid #DDD;
   background-color: white;
-  margin-top: @top-height + 20px;
-  padding: 20px @pad;
+  margin-top: 20px;
+  padding: 0 @pad;
   font-size: 0;
+  //.block-fix(@font-size);
 
   .img {
     border: 1pt solid #DDD;
     width: 100%;
+  }
+  &.main > div {
+    margin-top: @small-pad;
   }
 
   a.btn {
     display: block;
     color: red;
     margin-left: -1-@pad;
+    //margin: auto;
     font-size: 32px;
     margin-top: 50px;
     font-weight: bold;
+    // text-align: center;
+    //.rounded(5px);
     padding: 20px;
     padding-left: 19+@pad;
     .btn(#fff300);
@@ -126,7 +154,7 @@ h1 {
   }
 }
 .main-left {
-  //margin-top: @small-pad;
+  margin-top: @small-pad;
   vertical-align: top;
   font-size: 20px;
   line-height: 24px;
@@ -145,12 +173,6 @@ h1 {
   }
 }
 
-.divider {
-  height: 0px;
-  border-top: 1pt solid #ccc;
-  margin: 20px 0 40px;
-}
-
 .box {
   //border-bottom: 4pt double #DDD; 
   margin-bottom: 2*@small-pad;
@@ -165,25 +187,6 @@ h1 {
   > div {
     vertical-align: top;
     display: inline-block;
-  }
-}
-
-.text {
-  margin-left: 30px;
-  font-size: @font-size;
-  line-height: 26px;
-}
-
-.small-text {
-  margin-left: 30px;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: justify;
-  p {
-    margin-bottom: 5px;
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -207,9 +210,15 @@ h1 {
   &.right {
     margin-left: @margin;
     h1 {
-      margin-right: -@pad;
+      margin-right: -2-@pad;
       padding-left: 10px;
     }
+  }
+
+  .text {
+    margin-left: 30px;
+    font-size: @font-size;
+    line-height: 26px;
   }
 
   li:before {
@@ -283,6 +292,65 @@ h1 {
 #middle {
   margin-top: 40px;
 }
+/*
+.text {
+  display: none;
+  &:first-child {
+    display: block;
+  }
+  margin-bottom: 50px;
+  margin-left: 20px;
+
+  ul {
+    list-style: circle;
+    padding-left: 20px;
+    font-size: 80%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 150%;
+  }
+
+}
+
+
+#nivo {
+  width: 100%;
+  .box-shadow(0px 0px 2px 1px #888);
+}
+@btn-pad: 148px;
+.btn {
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  border: 1pt solid #CCC;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  display: block;
+  vertical-align: top;
+  //.3d();
+}
+
+.btn-red {
+  background-color: @one;
+  //.3d(@first);
+}
+.btn-yellow {
+  background-color: @two;
+
+  //.3d(@two);
+}
+.btn-blue {
+  background-color: @three;
+
+  //.3d(@last);
+}
+
+.btn-big {
+  font-size: 30px;
+  height: 80px;
+  padding: 34px @btn-pad 0px;
+}
+*/
 
 .footer {
   font-size: 80%;
