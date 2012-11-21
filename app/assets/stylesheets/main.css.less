@@ -1,3 +1,10 @@
+.transition(@item: all, @dur: 1s, @ease: ease, @delay: 0) {
+  -o-transition: @item @dur @ease @delay;
+  -moz-transition: @item @dur @ease @delay;
+  -webkit-transition: @item @dur @ease @delay;
+  transition: @item @dur @ease @delay;
+}
+
 .gradient(@start: white, @stop: grey) {
   background: @start;
   background: -moz-linear-gradient(top, @start 0%, @stop 100%);
@@ -132,18 +139,32 @@ h1 {
     border: 1pt solid #DDD;
     width: 100%;
   }
+}
 
-  a.btn {
-    display: block;
+.buy-now {
+  margin-left: -1-@pad;
+  margin-top: 50px;
+  padding: 20px;
+  padding-left: 19+@pad;
+  .btn(#fff300);
+  text-decoration: none;
+  a {
     color: red;
-    margin-left: -1-@pad;
     font-size: 32px;
-    margin-top: 50px;
     font-weight: bold;
-    padding: 20px;
-    padding-left: 19+@pad;
-    .btn(#fff300);
-    text-decoration: none;
+  }
+  span {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: top;
+    margin-left: 10px;
+    .transition(opacity, 0.2s);
+    opacity: 0;
+  }
+  &:hover {
+    span {
+      opacity: 1;
+    }
   }
 }
 .main-left {

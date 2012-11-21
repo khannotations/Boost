@@ -21,13 +21,16 @@
   
 
 #content
+  .divider.hidden{:name => "buy"}
   .main-left{:style => "width: 55%; margin-right: 5%;"}
     %h1 The ACT Boost
     %h5 
       The one and only guide you'll ever need to 
       %strong pwn
       the ACT!
-    %a.btn{:href=>"/buy"} Buy now!
+    .btn.buy-now{:href => "#"}
+      %a Buy now! 
+      %span (with PayPal)
 
   .main-right{:style => "width: 40%;"}
     %img{:src => "/assets/logo-square.png", :alt => "The Boost Apple"}
