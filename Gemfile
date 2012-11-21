@@ -11,6 +11,7 @@ group :production do
 end
 
 gem 'haml'
+gem 'therubyracer'
 gem 'jquery-rails'
 
 # Gems used only for assets and not required
