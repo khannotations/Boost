@@ -1,4 +1,29 @@
-@import "base.less";
+.gradient(@start: white, @stop: grey) {
+  background: @start;
+  background: -moz-linear-gradient(top, @start 0%, @stop 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@stop));
+  background: -webkit-linear-gradient(top, @start 0%,@stop 100%); 
+  background: -o-linear-gradient(top, @start 0%,@stop 100%); 
+  background: -ms-linear-gradient(top, @start 0%,@stop 100%);
+  background: linear-gradient(top, @start 0%,@stop 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfecfc', endColorstr='#319ff9',GradientType=0 );
+}
+.btn(@color: #FAFAFA) {
+  .gradient(lighten(@color, 5%), darken(@color, 10%));
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  &:hover {
+    .gradient(lighten(@color, 15%), darken(@color, 5%));
+  }
+  &:active {
+    .gradient(@color, lighten(@color, 10%));
+  }
+  cursor:pointer;
+}
+
+.3d(@color: #eee) {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  .gradient(lighten(@color, 5%), darken(@color, 10%));
+}
 
 @width: 980px;
 @back: #030739;
@@ -11,12 +36,8 @@ body {
   line-height: @line-height;
   font-family: "Droid Serif", serif;
   font-family: "PT Sans";
-  //font-family: "Mako";
-  .rad-gradient(white, @background);
   background-image: url("/assets/back-diag.jpg");
   background-repeat: repeat-x repeat-y;
-  //background-size: cover;
-  //background-repeat: no-repeat;
 }
 
 h1 {
@@ -244,7 +265,6 @@ h1 {
   padding: 10px;
   margin-top: 30px;
   //border-top: 3pt double #ddd;
-  .block-fix(@font-size);
 }
 .test {
   display: inline-block;
