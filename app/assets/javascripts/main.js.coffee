@@ -22,12 +22,3 @@ gplus = () ->
     else
       gplus()
   , 1000)
-  
-
-#'fade,fold,sliceDown,sliceUp'
-$(window).load(() ->
-  $("#slider").nivoSlider({
-    effect: 'fade,fold,sliceDown,sliceUp',
-    pauseTime: 10000
-  })
-)
