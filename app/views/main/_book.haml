@@ -1,6 +1,7 @@
-.box
+.box.one
+  %h1 Book Overview
   .small.left.one
-    %h1 Book Overview
+    
     .text
       %p 
         I wrote this book after years of experience, training and all that good stuff about why everyone should buy this book. Maybe discuss philosophy/overview here, too?
@@ -9,29 +10,76 @@
           %li if you want
   .big
     %img{:src => "/assets/1.png"}
+%a{:name => "english"}
 .box
+  %h1 English
   .big
-    %img{:src => "/assets/2.png"}
-  .small.right.two
-    %h1 Reading
+    %img{:src => "/assets/english.jpg"}
+  .small.right
     .text
-      %p 
-        An explanation of your idea behind the reading section, and why it's awesome. the image should correspond.
-.box
+      %ul
+        %li Comma usage
+        %li Apostrophes
+        %li Semicolons & colons
+        %li Subject-verb agreement
+        %li Sentence structure
+        %li Punctuation (periods, question marks, etc.)
+%a{:name => "math"}
+.box.three
+  %h1 Mathematics
   .small.left.three
-    %h1 Mathematics
     .text
-      %p 
-        I'm tryign to think of ways to spicen this up with color...ideas?
+      %ul 
+        %li Pre-algebra (division, exponents, probability, proportions, etc.)
+        %li Algebra (inequalities, linear equations, logarithms, quadratics, etc.)
+        %li Coordinate geometry (x,y plane, slope, distance/midpoint, parallel vs. Perpendicular, etc.)
+        %li Plane geometry (angles, circles, triangles, etc.)
+        %li Trigonometry (identities,  basic SOHCAHTOA, etc.)
+        %li Importance of programs
+        %li Plugging and testing middle answers
+        %li Understanding difficulty increases proportionally to problem #
+
   .big
-    %img{:src => "/assets/3.png"}
-.box
+    %img{:src => "/assets/math.jpg"}
+%a{:name => "reading"}
+.box.two
+  %h1 Reading
   .big
-    %img{:src => "/assets/2.png"}
-  .small.right.four
-    %h1 Science
+    %img{:src => "/assets/reading.jpg"}
+  .small.right.two
     .text
-      %p 
-        E = MC
-        %sup 2
-        , yo
+      %ul 
+        %li Prose fiction, social science, natural science, humanities
+        %li Back and forth strategy
+        %li Key word circling
+        %li Efficient skimming
+        %li Vocabulary-in-context
+        %li Author statements & inferences
+
+%a{:name => "science"}
+.box.four
+  %h1 Science
+  .small.left.four
+    .text
+      %ul 
+        %li Efficient skimming
+        %li Understanding graphs, charts and data tables 
+        %li Variable relationships
+        %li Importance of gist vs. details
+        %li Attacking conflicting viewpoints passages separately and differently
+  .big
+    %img{:src => "/assets/science.jpg"}
+%a{:name => "writing"}
+.box.one
+  %h1 Writing
+  .big
+    %img{:src => "/assets/writing.jpg"}
+  .small.right.five
+    .text
+      %ul 
+        %li Relevant-exemplar strategy
+        %li The 3-3 rule
+        %li Intro, 3b, conclusion model
+        %li Importance of clarity, specifics, and consistency
+  
+

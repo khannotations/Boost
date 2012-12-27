@@ -1,6 +1,5 @@
 /*
- *
  *= require_self
- *= require reset
+ *= require bootstrap-combined.min
  *= require_tree .
 */

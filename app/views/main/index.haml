@@ -1,45 +1,61 @@
 .top-container
-  #top.container
-    %a{:href => "/"}
-      %img#logo{:src => "/assets/logo-long.png"}
-    .pull-right
-      #social
-      :plain
-        <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
-        <g:plusone size="medium"></g:plusone>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theactboost.com" data-text="The sweetest ACT prep book, the ACT Boost!" data-count="horizontal">Tweet</a>
+  #top.contain
+    -#
+      %a{:href => "/"}
+        %img#logo{:src => "/assets/logo-long.png"}
+      .pull-right
+        #social
+        :plain
+          <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
+          <g:plusone size="medium"></g:plusone>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theactboost.com" data-text="The sweetest ACT prep book, the ACT Boost!" data-count="horizontal">Tweet</a>
+    #logo
+      %a{:href => "/"}
+        %img.pull-left{:src => "/assets/rocket.png"}
+        %p.pull-left.logo-text The ACT Boost
     %table.nav
       %tr
-        %td{:target => "book"} 
-          %p Book
-        %td{:target => "acclaim"} 
+        %td#nav-list-show{:target => "book"} 
+          %p
+            Book 
+            %span.caret{:style => "vertical-align: 20%;"}
+          %ul#nav-list
+            .arrow-up
+            %li.js-nav{:target => "english"} English
+            %li.js-nav{:target => "math"} Mathematics
+            %li.js-nav{:target => "reading"} Reading
+            %li.js-nav{:target => "science"} Science
+            %li.js-nav{:target => "writing"} Writing
+        %td.js-nav{:target => "acclaim"} 
           %p Acclaim
-        %td{:target => "author"} 
+        %td.js-nav{:target => "author"} 
           %p Author
         %td{:target => "buy"} 
           %p Buy!
-  
 
-#content
-  .divider.hidden{:name => "buy"}
-  .main-left{:style => "width: 55%; margin-right: 5%;"}
-    %h1 The ACT Boost
+
+#preview 
+  .preview-left{:style => "width: 55%; margin-right: 5%;"}
+    %h1.logo-text The ACT Boost
     %h5 
       The one and only guide you'll ever need to 
       %strong pwn
       the ACT!
-    .btn.buy-now{:href => "#"}
-      %a Buy now! 
-      %span (with PayPal)
+    -#
+      .btn.buy-now{:href => "#"}
+        %a Buy Now!
+        =#%span (with PayPal)
 
-  .main-right{:style => "width: 40%;"}
-    %img{:src => "/assets/logo-square.png", :alt => "The Boost Apple"}
-
-  .divider{:name => "book"}
+  .preview-right{:style => "width: 30%;"}
+    %img{:src => "/assets/rocket.png", :alt => "The Boost Apple"}
+#content
+  %a{:name => "book"}
   = render :partial => "book"
-  .divider{:name => "acclaim"}
+  %a{:name => "acclaim"}
+  .divider
   = render :partial => "acclaim"
-  .divider{:name => "author"}
+  %a{:name => "author"}
+  .divider
   = render :partial => "author"
 
 
@@ -48,6 +64,8 @@
   %a{:href => "mailto:jay.jn.gor@gmail.com"} jay.jn.gor@gmail.com 
   |&nbsp;
   Website design by
-  %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan
+  %a{:href => "//faiazkhan.com", :target => "_blank"} Rafi Khan &nbsp; &nbsp;
+  :plain
+    <fb:like href="http://theactboost.com" send="false" layout="button_count" width="30" show_faces="false"></fb:like>
    
         
