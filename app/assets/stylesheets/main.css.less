@@ -60,6 +60,10 @@ li {
   list-style: none;
 }
 
+p {
+  line-height: normal;
+}
+
 .contain {
   width: 960px;
   margin: 0 auto;
@@ -74,6 +78,9 @@ li {
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
   //background-image: url("/assets/back-diag.jpg");
+  a {
+    color: black;
+  }
 }
 
 #top {
@@ -155,6 +162,9 @@ li {
       border-right: none;
     }
   }
+  .selected {
+    color: @maroon;
+  }
 }
 
 #nav-list {
@@ -163,7 +173,7 @@ li {
   font-size: 14px;
   text-align: left;
   top: 70px;
-  left: 805px;
+  left: 825px;
   z-index: 1000;
   background-color: rgba(0,0,0,0.8);
   color: white;
@@ -195,6 +205,12 @@ li {
   }
 }
 
+.kicker {
+  font-size: 16px;
+  text-align: justify;
+  margin-top: 20px;
+}
+
 @left: 45%;
 @gap: 100 - @left - @right;
 @right: 47%;
@@ -214,6 +230,9 @@ li {
   .img {
     border: 1pt solid #DDD;
     width: 100%;
+  }
+  &.about {
+    margin-top: @top-height + 20px;
   }
 }
 
@@ -431,6 +450,9 @@ li {
   color: #222;
 
   a {
-    color: #333;
+    color: @maroon;
+    &:hover {
+      color: darken(@maroon, 10%);
+    }
   }
 }
