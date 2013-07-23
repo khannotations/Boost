@@ -1,6 +1,7 @@
 Boost::Application.routes.draw do
 
   root :to => 'main#index'
-  match 'about' => 'main#about'
+  get 'about' => 'main#about'
+  get 'book' => 'main#book'
 
 end

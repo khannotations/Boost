@@ -1,22 +1,4 @@
-.top-container
-  #top.contain
-    #logo
-      %a{:href => "/"}
-        %img.pull-left{:src => "/assets/rocket_logo_color.png"}
-        %p.pull-left.logo-text The ACT Boost
-    %table.nav
-      %tr
-        %td#nav-list-show{:target => "book"} 
-          %a{:href=> "/"}
-            %p
-              Book 
-        %td
-          %p.selected About
-        -# 
-          %td.js-nav{:target => "author"} 
-          %p Author
-        %td{:target => "buy"} 
-          %p Buy!
+= render partial: 'header'
 #content.about
   %a{:name => "acclaim"}
   = render :partial => "acclaim"

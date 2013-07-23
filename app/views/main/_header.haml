@@ -6,24 +6,20 @@
         %p.pull-left.logo-text The ACT Boost
     %table.nav
       %tr
+        %td
+          %a{href: '/'}
+            %p Home
         %td#nav-list-show{:target => "book"} 
-          %a{:href=> "/"}
-            %p
-              Book 
-              %span.caret{:style => "vertical-align: 20%;"}
-          %ul#nav-list
-            .arrow-up
-            %li.js-nav{:target => "english"} English
-            %li.js-nav{:target => "math"} Mathematics
-            %li.js-nav{:target => "reading"} Reading
-            %li.js-nav{:target => "science"} Science
-            %li.js-nav{:target => "writing"} Writing
-        
+          %a{:href=> "/book"}
+            %p Book 
         %td
           %a{:href=>"/about"}
             %p About
-        -# 
-          %td.js-nav{:target => "author"} 
-          %p Author
         %td{:target => "buy"} 
-          %p Buy!
+          :plain
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="G388G7Q2VK4FN">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>

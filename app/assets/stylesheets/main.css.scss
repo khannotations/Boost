@@ -1,50 +1,16 @@
-.transition(@item: all, @dur: 1s, @ease: ease, @delay: 0) {
-  -o-transition: @item @dur @ease @delay;
-  -moz-transition: @item @dur @ease @delay;
-  -webkit-transition: @item @dur @ease @delay;
-  transition: @item @dur @ease @delay;
-}
-
-.gradient(@start: white, @stop: grey) {
-  background: @start;
-  background: -moz-linear-gradient(top, @start 0%, @stop 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@stop));
-  background: -webkit-linear-gradient(top, @start 0%,@stop 100%); 
-  background: -o-linear-gradient(top, @start 0%,@stop 100%); 
-  background: -ms-linear-gradient(top, @start 0%,@stop 100%);
-  background: linear-gradient(top, @start 0%,@stop 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfecfc', endColorstr='#319ff9',GradientType=0 );
-}
-.btn(@color: #FAFAFA, @text-shadow: rgba(255,255,255, 0.75)) {
-  .gradient(lighten(@color, 5%), darken(@color, 10%));
-  text-shadow: 0 1px 1px @text-shadow;
-  &:hover {
-    .gradient(lighten(@color, 10%), darken(@color, 5%));
-  }
-  &:active {
-    .gradient(@color, lighten(@color, 10%));
-  }
-  cursor:pointer;
-}
-
-.3d(@color: #eee) {
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  .gradient(lighten(@color, 5%), darken(@color, 10%));
-}
-
 .bold {
   font-weight: bold;
 }
 
-@width: 980px;
-@back: #030739;
-@pad: 30px;
-@background: #FDFDFD;
-@font-size: 18px;
-@line-height: 24px;
-@maroon: #960005;
+$width: 980px;
+$back: #030739;
+$pad: 30px;
+$background: #FDFDFD;
+$font-size: 18px;
+$line-height: 24px;
+$maroon: #960005;
 body {
-  font: @font-size;
+  font: $font-size;
   font-family: "Open Sans";
   // background-image: url("/assets/back-diag.jpg");
   // background-repeat: repeat-x repeat-y;
@@ -69,12 +35,12 @@ p {
   margin: 0 auto;
 }
 
-@top-height: 100px;
+$top-height: 100px;
 .top-container {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
-  height: @top-height;
+  height: $top-height;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
   //background-image: url("/assets/back-diag.jpg");
@@ -91,21 +57,21 @@ p {
 
 /* Tab colors */
 /*
-@one: #00B9E4;
-@two: #EC008C;
-@three: #92D400;
-@four: #FF6E00;
+$one: #00B9E4;
+$two: #EC008C;
+$three: #92D400;
+$four: #FF6E00;
 */
-@e-color: #fff;
-@one: @e-color;
-@two: @e-color;
-@three: @e-color;
-@four: @e-color;
+$e-color: #fff;
+$one: $e-color;
+$two: $e-color;
+$three: $e-color;
+$four: $e-color;
 
-@one: #a8fffe;
-@two: #eca4c0;
-@three: #D3F499;
-@four: #FFAF9D;
+$one: #a8fffe;
+$two: #eca4c0;
+$three: #D3F499;
+$four: #FFAF9D;
 
 #logo {
   width: 50%;
@@ -117,13 +83,13 @@ p {
     font-size: 30px;
     margin-top: 35px;
     margin-left: 20px;
-    color: @maroon;
+    color: $maroon;
   }
 }
 
 .logo-text {
   font-family: "Droid Serif";
-  color: @maroon;
+  color: $maroon;
   font-size: 50px;
 
 }
@@ -139,31 +105,31 @@ p {
     cursor:pointer;
     border-right: 1pt solid #DDD;
     padding: 10px 0;
-    @shadow-color: rgba(255, 255, 255, 0.75);
+    // $shadow-color: rgba(255, 255, 255, 0.75);
     /*
     &:first-child {
-      // background-color: @one;
-      // .btn(@one);
+      // background-color: $one;
+      // .btn($one);
       //.border-radius(0px, 0px, 5px, 5px);
     }
     &:nth-child(2) {
-      background-color: @two;
-      .btn(@two);
+      background-color: $two;
+      .btn($two);
     }
     &:nth-child(3) {
-      background-color: @three;
-      .btn(@three);
+      background-color: $three;
+      .btn($three);
     }
     */
     &:last-child {
-      // background-color: @four;
-      // .btn(@four);
+      // background-color: $four;
+      // .btn($four);
       //.border-radius(5px, 5px, 0px, 0px);
       border-right: none;
     }
   }
   .selected {
-    color: @maroon;
+    color: $maroon;
   }
 }
 
@@ -193,15 +159,15 @@ p {
     .transition(all, 0.2s);
   }
   .arrow-up {
-    @arrow: 5px;
+    $arrow: 5px;
     position: absolute;
-    top: -@arrow;
+    top: -$arrow;
     left: 10px;
     width: 0; 
     height: 0; 
-    border-left: @arrow solid transparent;
-    border-right: @arrow solid transparent;
-    border-bottom: @arrow solid rgba(0,0,0,0.8);
+    border-left: $arrow solid transparent;
+    border-right: $arrow solid transparent;
+    border-bottom: $arrow solid rgba(0,0,0,0.8);
   }
 }
 
@@ -211,14 +177,14 @@ p {
   margin-top: 20px;
 }
 
-@left: 45%;
-@gap: 100 - @left - @right;
-@right: 47%;
-@small-pad: 20px;
+$left: 45%;
+$gap: 100 - $left - $right;
+$right: 47%;
+$small-pad: 20px;
 
 #preview {
   font-size: 0;
-  margin-top: @top-height + 20px;
+  margin-top: $top-height + 20px;
 }
 
 #content {
@@ -226,13 +192,13 @@ p {
   background-color: white;
   margin-top: 50px;
   font-size: 0;
-  padding: 20px @pad;
+  padding: 20px $pad;
   .img {
     border: 1pt solid #DDD;
     width: 100%;
   }
   &.about {
-    margin-top: @top-height + 20px;
+    margin-top: $top-height + 20px;
   }
 }
 
@@ -255,7 +221,7 @@ p {
 /*
 .buy-now {
   margin-top: 50px;
-  padding: @pad;
+  padding: $pad;
   //.btn(#fff300);
   .btn(#FFF180);
   text-decoration: none;
@@ -283,14 +249,14 @@ p {
   vertical-align: top;
   font-size: 20px;
   display: inline-block;
-  width: @left;
-  margin-right: @gap;
+  width: $left;
+  margin-right: $gap;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
 .main-right {
   display: inline-block;
-  width: @right;
+  width: $right;
   img {
     width: 100%;
   }
@@ -304,7 +270,7 @@ p {
 
 /* Book section */ 
 .box {
-  margin-bottom: 2*@small-pad;
+  margin-bottom: 2*$small-pad;
   &:first-child {
     padding-top: 0px;
   }
@@ -319,31 +285,31 @@ p {
   }
   > h1 {
     margin-top: -20px;
-    margin-left: -@pad;
+    margin-left: -$pad;
     margin-bottom: 30px;
     width: 100%;
-    padding: @pad/3 @pad;
+    padding: $pad/3 $pad;
     .3d(#fff);
   }
   /*
   &.one h1 {
-    .3d(lighten(@one, 17%));
+    .3d(lighten($one, 17%));
   }
   &.two h1 {
-    .3d(lighten(@two, 20%));
+    .3d(lighten($two, 20%));
   }
   &.three h1 {
-    .3d(lighten(@three, 10%));
+    .3d(lighten($three, 10%));
   }
   &.four h1 {
-    .3d(lighten(@four, 10%));
+    .3d(lighten($four, 10%));
   }
   */
 }
 
 .text {
   margin-left: 25px;
-  font-size: @font-size;
+  font-size: $font-size;
   line-height: normal;
   li {
     text-align: left;
@@ -364,27 +330,27 @@ p {
   }
 }
 
-@small: 45%;
-@big: 45%;
-@margin: 100 - @small - @big;
+$small: 45%;
+$big: 45%;
+$margin: 100 - $small - $big;
 
 .small {
-  font-size: @font-size;
+  font-size: $font-size;
   text-align: justify;
-  width: @small;
+  width: $small;
 
   &.left {
-    margin-right: @margin;
+    margin-right: $margin;
     h1 { 
-      padding-left: @pad;
-      margin-left: -@pad;
+      padding-left: $pad;
+      margin-left: -$pad;
     }
   }
 
   &.right {
-    margin-left: @margin;
+    margin-left: $margin;
     h1 {
-      margin-right: -@pad;
+      margin-right: -$pad;
       padding-left: 10px;
     }
   }
@@ -397,22 +363,24 @@ p {
     line-height: 160%;
     margin-bottom: 20px;
   }
+  /*
   &.one h1 {
-    .3d(lighten(@one, 20%));
+    .3d(lighten($one, 20%));
   }
   &.two h1 {
-    .3d(lighten(@two, 20%));
+    .3d(lighten($two, 20%));
   }
   &.three h1 {
-    .3d(lighten(@three, 10%));
+    .3d(lighten($three, 10%));
   }
   &.four h1 {
-    .3d(lighten(@four, 10%));
+    .3d(lighten($four, 10%));
   }
+  */
 }
 .big {
   font-size: 20px;
-  width: @big;
+  width: $big;
   img {
     // margin-top: 65px;
     width: 100%;
@@ -450,9 +418,9 @@ p {
   color: #222;
 
   a {
-    color: @maroon;
+    color: $maroon;
     &:hover {
-      color: darken(@maroon, 10%);
+      color: darken($maroon, 10%);
     }
   }
 }
