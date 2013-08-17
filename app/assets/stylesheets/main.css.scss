@@ -389,12 +389,14 @@ $margin: 100 - $small - $big;
 .testimonials {
   padding: 10px;
   margin-top: 30px;
+  font-size: 14px;
   //border-top: 3pt double #ddd;
 }
 .test {
   display: inline-block;
   width: 29%;
   margin-right: 5%;
+  vertical-align: top;
   &:last-child {
     margin: 0;
   }
