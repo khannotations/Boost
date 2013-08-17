@@ -1,6 +1,5 @@
 = render partial: 'header'
-#content.book
-
+#content.book{:style=> "margin-top: 120px;"}
   %a{:name => "english"}
   .box
     %h1 English
@@ -75,7 +74,6 @@
         %ul 
           %li Relevant-exemplar strategy
           %li The 3-3 rule
-          %li Intro, 3b, conclusion model
           %li Importance of clarity, specifics, and consistency
     
 = render :partial => "footer"

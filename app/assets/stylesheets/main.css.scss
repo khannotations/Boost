@@ -103,7 +103,7 @@ $four: #FFAF9D;
   font-size: 20px;
   td {
     cursor:pointer;
-    border-right: 1pt solid #DDD;
+    // border-right: 1pt solid #DDD;
     padding: 10px 0;
     // $shadow-color: rgba(255, 255, 255, 0.75);
     /*
@@ -156,7 +156,7 @@ $four: #FFAF9D;
     &:last-child {
       padding-bottom: 6px;
     }
-    .transition(all, 0.2s);
+    // @include transition(all, 0.2s);
   }
   .arrow-up {
     $arrow: 5px;
@@ -178,8 +178,8 @@ $four: #FFAF9D;
 }
 
 $left: 45%;
-$gap: 100 - $left - $right;
 $right: 47%;
+$gap: 100 - $left - $right;
 $small-pad: 20px;
 
 #preview {
@@ -192,7 +192,7 @@ $small-pad: 20px;
   background-color: white;
   margin-top: 50px;
   font-size: 0;
-  padding: 20px $pad;
+  padding: $pad;
   .img {
     border: 1pt solid #DDD;
     width: 100%;
@@ -289,7 +289,7 @@ $small-pad: 20px;
     margin-bottom: 30px;
     width: 100%;
     padding: $pad/3 $pad;
-    .3d(#fff);
+    // .3d(#fff);
   }
   /*
   &.one h1 {

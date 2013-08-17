@@ -1,30 +1,4 @@
-.top-container
-  #top.contain
-    #logo
-      %a{:href => "/"}
-        %img.pull-left{:src => "/assets/rocket_logo_color.png"}
-        %p.pull-left.logo-text The ACT Boost
-    %table.nav
-      %tr
-        %td#nav-list-show{:target => "book"} 
-          %p.selected
-            Book 
-            %span.caret{:style => "vertical-align: 20%;"}
-          %ul#nav-list
-            .arrow-up
-            %li.js-nav{:target => "english"} English
-            %li.js-nav{:target => "math"} Mathematics
-            %li.js-nav{:target => "reading"} Reading
-            %li.js-nav{:target => "science"} Science
-            %li.js-nav{:target => "writing"} Writing
-        %td
-          %a{:href=>"/about"}
-            %p About
-        -# 
-          %td.js-nav{:target => "author"} 
-          %p Author
-        %td{:target => "buy"} 
-          %p Buy!
+= render partial: 'header'
 #preview 
   .preview-left
     %h1.logo-text The ACT Boost
@@ -35,7 +9,32 @@
     %img{:src => "/assets/rocket_logo_color.png", :alt => "The ACT Boost"}
 #content
   %a{:name => "book"}
-  = render :partial => "book"
+  .box.one
+    %h1 Book Overview
+    .text
+      %p{:style=>"margin-bottom: 30px;"}
+        %span.bold This is a strategic, efficient guide to the ACT, not a couple-hundred page prep book. 
+        I’ve included things like the most important formulas, the best preparation material, methodologies for every section, and practice questions and a practice test with detailed answers and explanations. It contains 
+        %span.bold test-taking strategies idiosyncratic to the ACT only,
+        methods I’ve developed after two Kaplan courses, completion of Barron’s, Princeton Review, ACT for Dummies, and McGraw Hill books, and an Academic Approach ACT class.
+    .small.left.one
+      .text
+        %p.bold Goals
+        %p
+          This guide will boost your score by at least one or two points in each subject area. Implementing my ACT test-taking strategy will cut the time you spend on each test, giving you time to go back and check answers on each section. The essay portion provides examples and consistency secrets to scoring in the 10-12 range.
+
+
+        %p.bold Personal Experience
+        %p
+          After exhausting virtually every available ACT text and retaking official ACTs, my score was stuck around the 33-34 range. It became obvious that it wasn’t what I knew, rather it was how I applied my knowledge. Changes in my methodology boosted my score into the 99th percentile, and this guide will help you see similar improvement.
+    .big
+      %img{:src => "/assets/1.png"}
+
+    .text
+      %p.bold Methodology
+      %p
+        Our working hypothesis is that it's not necessarily the volume of what students know, but how they apply and implement it to solve ACT-type problems.  We give students the most important English grammar rules, what Math formulas they should know and master, and a sample Writing essay to draw examples from.  But, more importantly, we teach them how to apply this semantic knowledge with tips, tricks and strategies which allow quicker problem solving and improve students' scores.  For example, The ACT Boost demonstrates how to break down and pick apart the Reading passages on the exam, whereas most students typically will read them like a news article or homework assignment.  These methodologies, which have been developed through years of experience and proven results, are what set The ACT Boost apart from its competition.
+
 
 = render :partial => "footer"
    
