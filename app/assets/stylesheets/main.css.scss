@@ -12,8 +12,6 @@ $maroon: #960005;
 body {
   font: $font-size;
   font-family: "Open Sans";
-  // background-image: url("/assets/back-diag.jpg");
-  // background-repeat: repeat-x repeat-y;
   background-color: #f6f6fc;
 }
 
@@ -43,7 +41,6 @@ $top-height: 100px;
   height: $top-height;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
-  //background-image: url("/assets/back-diag.jpg");
   a {
     color: black;
   }
@@ -54,24 +51,6 @@ $top-height: 100px;
   position: relative;
   height: 100%;
 }
-
-/* Tab colors */
-/*
-$one: #00B9E4;
-$two: #EC008C;
-$three: #92D400;
-$four: #FF6E00;
-*/
-$e-color: #fff;
-$one: $e-color;
-$two: $e-color;
-$three: $e-color;
-$four: $e-color;
-
-$one: #a8fffe;
-$two: #eca4c0;
-$three: #D3F499;
-$four: #FFAF9D;
 
 #logo {
   width: 50%;
@@ -91,8 +70,8 @@ $four: #FFAF9D;
   font-family: "Droid Serif";
   color: $maroon;
   font-size: 50px;
-
 }
+
 .nav {
   position: absolute;
   top: 30px;
@@ -103,71 +82,13 @@ $four: #FFAF9D;
   font-size: 20px;
   td {
     cursor:pointer;
-    // border-right: 1pt solid #DDD;
     padding: 10px 0;
-    // $shadow-color: rgba(255, 255, 255, 0.75);
-    /*
-    &:first-child {
-      // background-color: $one;
-      // .btn($one);
-      //.border-radius(0px, 0px, 5px, 5px);
-    }
-    &:nth-child(2) {
-      background-color: $two;
-      .btn($two);
-    }
-    &:nth-child(3) {
-      background-color: $three;
-      .btn($three);
-    }
-    */
     &:last-child {
-      // background-color: $four;
-      // .btn($four);
-      //.border-radius(5px, 5px, 0px, 0px);
       border-right: none;
     }
   }
   .selected {
     color: $maroon;
-  }
-}
-
-#nav-list {
-  position: fixed;
-  display: none;
-  font-size: 14px;
-  text-align: left;
-  top: 70px;
-  left: 825px;
-  z-index: 1000;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-
-  > li {
-    cursor: pointer;
-    padding: 3px 10px;
-    &:hover {
-      background-color: rgba(255,255,255,0.2);
-    }
-    &:nth-child(2) {
-      padding-top: 6px;
-    }
-    &:last-child {
-      padding-bottom: 6px;
-    }
-    // @include transition(all, 0.2s);
-  }
-  .arrow-up {
-    $arrow: 5px;
-    position: absolute;
-    top: -$arrow;
-    left: 10px;
-    width: 0; 
-    height: 0; 
-    border-left: $arrow solid transparent;
-    border-right: $arrow solid transparent;
-    border-bottom: $arrow solid rgba(0,0,0,0.8);
   }
 }
 
@@ -218,33 +139,7 @@ $small-pad: 20px;
     width: 100%;
   }
 }
-/*
-.buy-now {
-  margin-top: 50px;
-  padding: $pad;
-  //.btn(#fff300);
-  .btn(#FFF180);
-  text-decoration: none;
-  a {
-    color: red;
-    font-size: 32px;
-    font-weight: bold;
-  }
-  span {
-    display: inline-block;
-    font-size: 20px;
-    vertical-align: top;
-    margin-left: 10px;
-    .transition(opacity, 0.2s);
-    opacity: 0;
-  }
-  &:hover {
-    span {
-      opacity: 1;
-    }
-  }
-}
-*/
+
 .main-left {
   vertical-align: top;
   font-size: 20px;
@@ -289,22 +184,7 @@ $small-pad: 20px;
     margin-bottom: 30px;
     width: 100%;
     padding: $pad/3 $pad;
-    // .3d(#fff);
   }
-  /*
-  &.one h1 {
-    .3d(lighten($one, 17%));
-  }
-  &.two h1 {
-    .3d(lighten($two, 20%));
-  }
-  &.three h1 {
-    .3d(lighten($three, 10%));
-  }
-  &.four h1 {
-    .3d(lighten($four, 10%));
-  }
-  */
 }
 
 .text {
@@ -363,20 +243,6 @@ $margin: 100 - $small - $big;
     line-height: 160%;
     margin-bottom: 20px;
   }
-  /*
-  &.one h1 {
-    .3d(lighten($one, 20%));
-  }
-  &.two h1 {
-    .3d(lighten($two, 20%));
-  }
-  &.three h1 {
-    .3d(lighten($three, 10%));
-  }
-  &.four h1 {
-    .3d(lighten($four, 10%));
-  }
-  */
 }
 .big {
   font-size: 20px;
@@ -390,13 +256,12 @@ $margin: 100 - $small - $big;
   padding: 10px;
   margin-top: 30px;
   font-size: 14px;
-  //border-top: 3pt double #ddd;
 }
 .test {
   display: inline-block;
   width: 29%;
   margin-right: 5%;
-  vertical-align: top;
+  vertical-align: top;  
   &:last-child {
     margin: 0;
   }
@@ -418,7 +283,6 @@ $margin: 100 - $small - $big;
   text-align: center;
   padding: 20px 00px;
   color: #222;
-
   a {
     color: $maroon;
     &:hover {
